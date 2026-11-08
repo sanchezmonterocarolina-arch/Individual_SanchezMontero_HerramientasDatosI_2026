@@ -1,0 +1,15 @@
+Beynnon, B. D., Vacek, P. M., Newell, M. K., Tourville, T. W., Smith, H. C., Shultz, S. J., Slauterbeck, J. R., & Johnson, R. J. (2014). The effects of level of competition, sport, and sex on the incidence of first-time noncontact anterior cruciate ligament injury. The American Journal of Sports Medicine, 42(8), 1806–1812. https://doi.org/10.1177/0363546514540862
+
+Gans, I., Retzky, J. S., Jones, L. C., & Tanaka, M. J. (2018). Epidemiology of recurrent anterior cruciate ligament injuries in National Collegiate Athletic Association sports: The Injury Surveillance Program, 2004–2014. Orthopaedic Journal of Sports Medicine, 6(6), 2325967118777823. https://doi.org/10.1177/2325967118777823
+
+International Olympic Committee Injury and Illness Epidemiology Consensus Group. (2020). International Olympic Committee consensus statement: Methods for recording and reporting of epidemiological data on injury and illness in sports 2020 (including the STROBE Extension for Sports Injury and Illness Surveillance \[STROBE-SIIS\]). Orthopaedic Journal of Sports Medicine, 8(2), 2325967120902908. https://doi.org/10.1177/2325967120902908
+
+Kikumoto, T., Mizutani, J., Tsuchida, A., Takabayashi, T., Kubo, M., Okada, H., & Kon, Y. (2026). Epidemiology of ankle sprains and anterior cruciate ligament injuries in youth basketball athletes in Niigata, Japan: A regional survey on injury management and healthcare professional involvement. PLOS ONE, 21(3), e0344196. https://doi.org/10.1371/journal.pone.0344196 Knowles, S. B., Marshall, S. W., & Guskiewicz, K. M. (2006). Issues in estimating risks and rates in sports injury research. Journal of Athletic Training, 41(2), 207–215.
+
+Maniar, N., Cole, M. H., Bryant, A. L., & Opar, D. A. (2022). Muscle force contributions to anterior cruciate ligament loading. Sports Medicine, 52, 1737–1750. https://doi.org/10.1007/s40279-022-01674-3
+
+Montalvo, A. M., Schneider, D. K., Webster, K. E., Yut, L., Galloway, M. T., Heidt, R. S., Jr., Kaeding, C. C., Kremcheck, T. E., Magnussen, R. A., Parikh, S. N., Stanfield, D. T., Wall, E. J., & Myer, G. D. (2019). Anterior cruciate ligament injury risk in sport: A systematic review and meta-analysis of injury incidence by sex and sport classification. Journal of Athletic Training, 54(5), 472–482. https://doi.org/10.4085/1062-6050-407-16
+
+Stevenson, J. H., Beattie, C. S., Schwartz, J. B., & Busconi, B. D. (2015). Assessing the effectiveness of neuromuscular training programs in reducing the incidence of anterior cruciate ligament injuries in female athletes: A systematic review. The American Journal of Sports Medicine, 43(2), 482–490. https://doi.org/10.1177/0363546514523388
+
+Sugimoto, D., Myer, G. D., Barber Foss, K. D., Pepin, M. J., Micheli, L. J., & Hewett, T. E. (2016). Critical components of neuromuscular training to reduce ACL injury risk in female athletes: Meta-regression analysis. British Journal of Sports Medicine, 50(20), 1259–1266. https://doi.org/10.1136/bjsports-2015-095596
