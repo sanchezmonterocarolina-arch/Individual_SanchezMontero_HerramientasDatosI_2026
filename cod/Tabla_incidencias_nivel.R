@@ -16,3 +16,9 @@ incidencia.nivel <- base.lca |>
   mutate(
     tasa.incidencia = (lesiones / exposiciones) * 1000
   )
+
+write.csv2(
+  incidencia.deporte.top,
+  "res/tablas/incidencia_nivel.csv",
+  row.names = FALSE
+)
