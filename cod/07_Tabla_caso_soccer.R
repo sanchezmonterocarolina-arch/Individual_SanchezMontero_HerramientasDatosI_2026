@@ -16,7 +16,7 @@ soccer.caso <- base.lca |>
   )
 
 write.csv2(
-  incidencia.deporte.top,
+  soccer.caso,
   "res/tablas/caso_soccer.csv",
   row.names = FALSE
 )

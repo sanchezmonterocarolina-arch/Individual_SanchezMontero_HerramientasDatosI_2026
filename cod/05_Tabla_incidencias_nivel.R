@@ -18,7 +18,7 @@ incidencia.nivel <- base.lca |>
   )
 
 write.csv2(
-  incidencia.deporte.top,
+  incidencia.nivel,
   "res/tablas/incidencia_nivel.csv",
   row.names = FALSE
 )

@@ -1,10 +1,9 @@
-incidencia.deporte <- base.lca |>
+incidencia.sexo <- base.lca |>
   filter(
-    deporte != "desconocido",
-    deporte != "soccer, basketball",
+    sexo != "desconocido",
     exposiciones > 0
   ) |>
-  group_by(deporte) |>
+  group_by(sexo) |>
   summarise(
     lesiones = sum(lesiones.lca),
     exposiciones = sum(exposiciones)
@@ -14,7 +13,7 @@ incidencia.deporte <- base.lca |>
   )
 
 write.csv2(
-  incidencia.deporte.top,
-  "res/tablas/incidencia_deporte.csv",
+  incidencia.sexo,
+  "res/tablas/incidencia_sexo.csv",
   row.names = FALSE
 )
