@@ -14,3 +14,9 @@ soccer.caso <- base.lca |>
   mutate(
     tasa.incidencia = (lesiones / exposiciones) * 1000
   )
+
+write.csv2(
+  incidencia.deporte.top,
+  "res/tablas/caso_soccer.csv",
+  row.names = FALSE
+)
