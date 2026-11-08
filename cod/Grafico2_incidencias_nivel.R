@@ -23,3 +23,12 @@ grafico.nivel <- ggplot(
     axis.title = element_text(size = 12),
     axis.text = element_text(size = 10)
   )
+
+ggsave(
+  filename = "res/graficos/incidencia_nivel.png",
+  plot = grafico.nivel,
+  width = 6,
+  height = 3.5,
+  units = "in",
+  dpi = 300
+)
