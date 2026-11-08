@@ -25,3 +25,12 @@ grafico.sexo <- ggplot(
     axis.text = element_text(size = 10),
     legend.position = "none"
   )
+
+ggsave(
+  filename = "res/graficos/incidencia_sexo.png",
+  plot = grafico.sexo,
+  width = 6,
+  height = 3.5,
+  units = "in",
+  dpi = 300
+)
