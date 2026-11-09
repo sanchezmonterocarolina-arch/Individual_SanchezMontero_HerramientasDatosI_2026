@@ -2,3 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# Archivos temporales de Quarto y LaTeX
+*.aux
+*.log
+*.tex
+*_files/
