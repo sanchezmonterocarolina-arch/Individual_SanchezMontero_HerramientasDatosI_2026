@@ -25,7 +25,7 @@ excecute:
 \textbf{Estudiante:} Carolina de Jesús Sánchez Montero\\
 \textbf{Carné:} C5J679\\
 \textbf{Profesor:} Luis Juarez Potoy\\
-\textbf{Fecha:} 16 de octubre de 2026\\[0.4cm]
+\textbf{Fecha:} 26 de noviembre de 2026\\[0.4cm]
 \textbf{Título del proyecto:} Análisis de la incidencia de lesiones del ligamento cruzado anterior en deportistas
 \end{flushleft}
 ```
@@ -34,11 +34,11 @@ excecute:
 
 ### **Tema:**
 
-Análisis de la incidencia de lesiones del ligamento cruzado anterior (LCA) en deportistas entre 2008 y 2012, según deporte, género y nivel competitivo.
+Análisis de la incidencia de lesiones del ligamento cruzado anterior (LCA) en deportistas según deporte, género y nivel competitivo en el periodo del 2000 al 2026.
 
 ### **Objetivo:**
 
-Analizar la incidencia de lesiones del ligamento cruzado anterior (LCA) en deportistas durante el periodo 2008–2012, considerando el deporte, el sexo y el nivel competitivo.
+Analizar descriptivamente las tasas de incidencia de lesiones del ligamento cruzado anterior (LCA) según deporte, sexo y nivel competitivo, a partir de datos epidemiológicos publicados por Beynnon et al. (2014) y Montalvo et al. (2019).
 
 ### **Introducción**
 
@@ -48,15 +48,13 @@ Entre estas lesiones se encuentra la del ligamento cruzado anterior (LCA), la cu
 
 Por otra parte, la información disponible indica que su incidencia puede variar según factores como la edad, el deporte, el sexo y el nivel competitivo. En este sentido, Montalvo et al. (2019) encontraron diferencias entre mujeres y hombres dependiendo de la clasificación del deporte, mientras que Beynnon et al. (2014) identificaron diferencias relacionadas con el nivel de competencia.
 
-Por esta razón, la presente investigación pretende analizar la incidencia de lesiones del ligamento cruzado anterior (LCA) en deportistas durante el periodo 2008–2012, considerando el deporte, el sexo y el nivel competitivo. Para ello, se utilizará información sobre este fenómeno disponible en estudios científicos y datos que puedan ser procesados mediante R. Además de describir los patrones de incidencia, se busca mencionar algunos factores asociados que puedan contribuir a comprender la ocurrencia de estas lesiones, así como las estrategias utilizadas para su prevención.
+Por esta razón, el presente estudio pretende analizar la incidencia de lesiones del ligamento cruzado anterior (LCA) en deportistas considerando el deporte, el sexo y el nivel competitivo. Esto se realizará a partir de los datos de Beynnon et al. (2014) y Montalvo et al. (2019). Para ello, también se utilizará información sobre este fenómeno disponible en estudios científicos y datos que puedan ser procesados mediante R. Además de describir los patrones de incidencia, se busca mencionar algunos factores asociados que puedan contribuir a comprender la ocurrencia de estas lesiones, así como las estrategias utilizadas para su prevención.
 
 ### **Datos**
 
-Para el presente análisis se utilizaron datos publicados por Beynnon et al. (2014), en el estudio The Effects of Level of Competition, Sport, and Sex on the Incidence of First-Time Noncontact Anterior Cruciate Ligament Injury. La información fue extraída de la Tabla 1 del artículo, correspondiente a lesiones iniciales del ligamento cruzado anterior (LCA) producidas sin contacto.
+Para el análisis se utilizaron datos publicados por Beynnon et al. (2014) en donde el estudio cuenta con datos recopilados entre 2008 y 2012 sobre lesiones iniciales del LCA sin contacto en deportistas de secundaria y universidad. Así como de Montalvo et al. (2019). el cual cuenta con observaciones de distintos estudios a los cuales se les aplica una revisión sistemática y un metaanálisis que refleja resultados sobre la incidencia de lesiones del LCA según sexo y clasificación del deporte.
 
-El estudio recopiló información entre 2008 y 2012 en instituciones educativas de Vermont, Estados Unidos, considerando deportistas de secundaria y universidad. Para el proyecto, se organizaron los datos publicados en una base de 19 registros, correspondientes a siete disciplinas deportivas.
-
-Las variables utilizadas fueron deporte, sexo, nivel competitivo, número de lesiones, exposiciones deportivas, tasa de incidencia por cada 1 000 exposiciones e intervalo de confianza del 95 %. La información se organizó inicialmente en Excel para su posterior importación y análisis mediante R.
+Para la base de datos utilizada, se usaron tablas de ambos estudios por separado y posteriormente, se unieron en `Base_maestra_lca.xlsx`la cual contiene 170 registros, con variables relevantes para el análisis planteado como deporte, nivel, sexo, entre otras. Por esta razón, como los artículos no emplean exactamente los mismos criterios de inclusión y definición de lesión, los resultados se presentan como un análisis descriptivo de los datos integrados.
 
 ```{r}
 #| echo: false
@@ -106,20 +104,22 @@ A partir de estos datos, podemos responder estas preguntas:
 
 ### **Metodología**
 
-Para este estudio, se realizó un análisis cuantitativo de carácter descriptivo utilizando la tasa de incidencias por cada 1000 exposiciones deportivas como principal medida de comparación. Para ello, se utilizó la siguiente fórmula:
+Para este estudio, se realizó un análisis cuantitativo descriptivo a partir de los datos obtenidos. Los resultados de cada base fueron analizados mediante R por medio de una base integrada. De esta manera, se excluyeron los registros con exposiciones iguales a cero, las comparaciones, categorías no identificadas o combinadas para un mejor análisis.
+
+Para cada grupo se sumaron las lesiones y las exposiciones deportivas incluidas, y se calculó una **tasa agrupada descriptiva** por 1 000 exposiciones con la siguiente fórmula:
 
 $$\text{Tasa de incidencia} =
 \frac{\text{Número de lesiones}}{\text{Número de exposiciones deportivas}}
 \times 1000
-$$
+$$$$\text{Tasa de incidencia} =\frac{\text{Número de lesiones}}{\text{Número de exposiciones deportivas}}\times 1000$$
 
-A partir de esta medida, se analizarán las diferencias en la incidencia de lesiones iniciales del ligamento cruzado anterior (LCA) sin contacto según el deporte, el sexo y el nivel competitivo. Los cálculos y las representaciones gráficas se realizarán mediante R.
+Mediante esta metodología, se consiguieron resultados por deporte, sexo y nivel competitivos con los cuales se construyeron gráficos. Los cuales tienen el objetivo de identificar diferencias entre los grupos analizados. Dado que los datos proceden de investigaciones con poblaciones y criterios metodológicos distintos, las comparaciones deben interpretarse con precaución y no permiten establecer relaciones causales.
 
 ### **Resultados**
 
-A partir de las fuentes recopiladas y la pregunta planteada, se realizó un análisis de los datos. A continuación, se muestran algunos de los resultados obtenidos.
+A continuación, se muestran gráficos generados a partir de las tasas obtenidas mediante la base utilizada.
 
-De acuerdo con la información, en el Gráfico 1, será mostrada la tasa de incidencia de la lesión del Ligamento Cruzado Anterior (LCA) de acuerdo con algunos deportes. Para ello, fue utilizada la fórmula que se presentó en la metodología.
+El Gráfico 1, presenta la tasa de incidencia de la lesión del Ligamento Cruzado Anterior (LCA) de acuerdo con algunos deportes. Para ello, se excluyeron las disciplinas no identificadas o combinadas.
 
 ```{r}
 #| echo: false
@@ -168,16 +168,13 @@ grafico.deporte <- ggplot(
   ) +
   theme_minimal() +
   theme(
-    plot.title = element_text(size = 14, face = "bold"),
+    plot.title = element_text(size = 12, face = "bold"),
     axis.title = element_text(size = 12),
     axis.text = element_text(size = 10)
   )
 
 grafico.deporte
 
-# poner color, ordenar datos, título, y no se qué más.
-# revisar el color
-# recortar los deportes, poner menos
 
 ```
 
@@ -185,7 +182,7 @@ A partir del Gráfico 1, se observan diferencias en la tasa de incidencia de les
 
 Estos resultados muestran que la incidencia de lesiones del LCA no es uniforme entre los deportes analizados. Sin embargo, las diferencias deben interpretarse con precaución, debido a que la base combina información procedente de distintos estudios y no todos los deportes cuentan con la misma cantidad de lesiones ni de exposiciones.
 
-Para este siguiente gráfico, se van a presentar incidencias por nivel competitivo. Para ello, se tienen como variables: *amateur*, *collegiate*, *elite*, *high school* y *profesional*.
+Para el Gráfico 2, se comparan las tasas de incidencias por nivel competitivo, en donde se tienen como variables: *amateur*, *collegiate*, *elite*, *high school* y *profesional*.
 
 ```{r}
 #| echo: false
@@ -220,26 +217,27 @@ incidencia.nivel <- base_maestra_lca |>
 grafico.nivel <- ggplot(
   incidencia.nivel,
   aes(
-    x = reorder(nivel.agrupado, -tasa.incidencia),
-    y = tasa.incidencia
+    x = tasa.incidencia,
+    y = reorder(nivel.agrupado, tasa.incidencia)
   )
 ) +
-  geom_col(fill = "#79A88B") +
+  geom_point(
+    color = "#407A5C",
+    size = 3.5
+  ) +
   labs(
     title = "Gráfico 2. Incidencia de lesiones del LCA según nivel competitivo",
-    x = "Nivel competitivo",
-    y = "Tasa de incidencia por 1000 exposiciones"
+    x = "Tasa por 1000 exposiciones",
+    y = "Nivel competitivo"
   ) +
   theme_minimal() +
   theme(
-    plot.title = element_text(size = 12, face = "bold"),
+    plot.title = element_text(size = 10, face = "bold"),
     axis.title = element_text(size = 12),
     axis.text = element_text(size = 10)
   )
 
 grafico.nivel
-
-# poner color, ordenar datos, título, y no se qué más.
 
 ```
 
@@ -285,7 +283,13 @@ grafico.sexo <- ggplot(
   )
 ) +
   geom_col() +
-  labs(
+  scale_fill_manual(
+  values = c(
+    "hombre" = "#659681",
+    "mujer" = "#A17DB5"
+  )
+) +
+labs(
     title = "Gráfico 3. Incidencia de lesiones del LCA según sexo",
     x = "Sexo",
     y = "Tasa de incidencia por 1000 exposiciones"
@@ -302,11 +306,11 @@ grafico.sexo <- ggplot(
 grafico.sexo
 ```
 
-A partir del Gráfico 3, se puede ver que las mujeres son más propensas a padecer de este tipo de lesiones. Sin embargo, esto no quiere decir que los hombres no las padezca sino que es más común en mujeres. El hecho de que las mujeres sean más propensas a la lesión de LCA, se debe a diferencias en la anatomía del cuarpo de la mujer.
+A partir del Gráfico 3, se puede ver que las mujeres presentan una mayor tasa en comparación con los hombres. Asimismo, este resultado no se puede generalizar a todos los deportes y niveles competitivos. Como lo señalan Montalvo et al. (2019) las diferencias por sexo varían según la clasificación del deporte.
 
 #### **Caso de estudio**
 
-Para este caso, se va a analizar específicamente el deporte "soccer", su incidencia, y diferencias entre hombres y mujeres, y en nivel competitivo. De la misma manera que los anteriores, se mide por la tasa de incidencia de cada categoría.
+Para este caso, se va a analizar específicamente el deporte fútbol (*"soccer"*), su incidencia, y diferencias entre hombres y mujeres en las categorías *high school* y *collegiate*. De la misma manera que los anteriores, se mide por la tasa de incidencia de cada categoría.
 
 ```{r}
 #| echo: false
@@ -339,26 +343,37 @@ soccer.caso <- base_maestra_lca |>
 grafico.soccer <- ggplot(
   soccer.caso,
   aes(
-    x = nivel.agrupado,
-    y = tasa.incidencia,
-    fill = sexo
+    x = tasa.incidencia,
+    y = nivel.agrupado,
+    color = sexo
   )
 ) +
-  geom_col(
-    position = "dodge"
+  geom_line(
+    aes(group = nivel.agrupado),
+    color = "grey65",
+    linewidth = 0.8
+  ) +
+  geom_point(size = 3.5) +
+  scale_color_manual(
+    values = c(
+      "hombre" = "#659681",
+      "mujer" = "#A17DB5"
+    )
   ) +
   labs(
-    title = "Incidencia de lesiones del LCA en fútbol",
+    title = "Gráfico 4. Incidencia de lesiones del LCA en fútbol",
     subtitle = "Comparación según sexo y nivel competitivo",
-    x = "Nivel competitivo",
-    y = "Tasa de incidencia por 1000 exposiciones",
-    fill = "Sexo"
+    x = "Tasa por 1000 exposiciones",
+    y = "Nivel competitivo",
+    color = "Sexo"
   ) +
   theme_minimal() +
   theme(
-    plot.title = element_text(size = 14, face = "bold"),
+    plot.title = element_text(size = 12, face = "bold"),
+    plot.subtitle = element_text(size = 10),
     axis.title = element_text(size = 12),
-    axis.text = element_text(size = 10)
+    axis.text = element_text(size = 10),
+    legend.position = "bottom"
   )
 
 grafico.soccer
@@ -367,6 +382,14 @@ grafico.soccer
 De acuerdo con la información anterior, se puede ver que en el nivel universitario tiende a haber más lesiones. Asimismo, las mujeres, en ambos casos, son las más propensas a estas lesiones.
 
 ### **Conclusiones**
+
+A partir del análisis y los resultados presentados, se obtienen las siguientes conclusiones:
+
+- Las tasas de incidencia de lesiones del LCA presentan diferencias entre los deportes analizados, lo que evidencia que su frecuencia no es uniforme entre las disciplinas incluidas.
+
+- La incidencia también varía según el nivel competitivo. En los datos analizados, los niveles amateur y collegiate presentan las mayores tasas descriptivas.
+
+- Las mujeres presentan una tasa de incidencia superior a la de los hombres en los datos agrupados. Sin embargo, esta diferencia debe interpretarse considerando el deporte, el nivel competitivo y las características de las fuentes utilizadas.
 
 \clearpage
 
@@ -378,7 +401,9 @@ De acuerdo con la información anterior, se puede ver que en el nivel universita
 
 \noindent\hangindent=1.27cm\hangafter=1International Olympic Committee Injury and Illness Epidemiology Consensus Group. (2020). International Olympic Committee consensus statement: Methods for recording and reporting of epidemiological data on injury and illness in sports 2020 (including the STROBE Extension for Sports Injury and Illness Surveillance \[STROBE-SIIS\]). Orthopaedic Journal of Sports Medicine, 8(2), 2325967120902908. https://doi.org/10.1177/2325967120902908
 
-\noindent\hangindent=1.27cm\hangafter=1 Kikumoto, T., Mizutani, J., Tsuchida, A., Takabayashi, T., Kubo, M., Okada, H., & Kon, Y. (2026). Epidemiology of ankle sprains and anterior cruciate ligament injuries in youth basketball athletes in Niigata, Japan: A regional survey on injury management and healthcare professional involvement. PLOS ONE, 21(3), e0344196. https://doi.org/10.1371/journal.pone.0344196 Knowles, S. B., Marshall, S. W., & Guskiewicz, K. M. (2006). Issues in estimating risks and rates in sports injury research. Journal of Athletic Training, 41(2), 207–215.
+\noindent\hangindent=1.27cm\hangafter=1 Kikumoto, T., Mizutani, J., Tsuchida, A., Takabayashi, T., Kubo, M., Okada, H., & Kon, Y. (2026). Epidemiology of ankle sprains and anterior cruciate ligament injuries in youth basketball athletes in Niigata, Japan: A regional survey on injury management and healthcare professional involvement. PLOS ONE, 21(3), e0344196. https://doi.org/10.1371/journal.pone.0344196
+
+\noindent\hangindent=1.27cm\hangafter=1 Knowles, S. B., Marshall, S. W., & Guskiewicz, K. M. (2006). Issues in estimating risks and rates in sports injury research. Journal of Athletic Training, 41(2), 207–215.
 
 \noindent\hangindent=1.27cm\hangafter=1 Maniar, N., Cole, M. H., Bryant, A. L., & Opar, D. A. (2022). Muscle force contributions to anterior cruciate ligament loading. Sports Medicine, 52, 1737–1750. https://doi.org/10.1007/s40279-022-01674-3
 
