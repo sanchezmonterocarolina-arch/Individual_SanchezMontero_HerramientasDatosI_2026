@@ -13,7 +13,7 @@ format:
         \usepackage{indentfirst}
         \setlength{\parindent}{1.27cm}
         \setlength{\parskip}{0pt}
-excecute:
+execute:
   echo: false
 ---
 
@@ -24,7 +24,7 @@ excecute:
 \textbf{Estudiante:} Carolina de Jesús Sánchez Montero\\
 \textbf{Carné:} C5J679\\
 \textbf{Profesor:} Luis Juarez Potoy\\
-\textbf{Fecha:} 26 de noviembre de 2026\\[0.4cm]
+\textbf{Fecha:} 19 de noviembre de 2026\\[0.4cm]
 \textbf{Título del proyecto:} Análisis de la incidencia de lesiones del ligamento cruzado anterior en deportistas
 \end{flushleft}
 ```
@@ -72,6 +72,10 @@ base_maestra_lca <- read_excel("../data/Data_Integrada/base_maestra_lca.xlsx",
     )
 ```
 
+\begin{center}
+\textbf{Tabla 1. Muestra de la base de datos integrada}
+\end{center}
+
 ```{r}
 #| echo: false
 
@@ -88,7 +92,7 @@ knitr::kable(
     5
   ),
   caption = 
-    "Muestra de la base de datos integrada.",
+    NULL,
     digits = 3
 )
 ```
@@ -107,7 +111,7 @@ A partir de estos datos, podemos responder estas preguntas:
 
 - ¿Qué diferencia existe entre hombres y mujeres?
 
-- ¿Qué diferencias existen los niveles en los que se practican los deportes?
+- ¿Qué diferencias existen entre los niveles en los que se practican los deportes?
 
 ### **Metodología**
 
@@ -117,7 +121,8 @@ Para cada grupo se sumaron las lesiones y las exposiciones deportivas incluidas,
 
 $$\text{Tasa de incidencia} =
 \frac{\text{Número de lesiones}}{\text{Número de exposiciones deportivas}}
-\times 1000$$$$\text{Tasa de incidencia} =\frac{\text{Número de lesiones}}{\text{Número de exposiciones deportivas}}\times 1000$$
+\times 1000
+$$
 
 Los resultados se representaron mediante gráficos por deporte, sexo y nivel competitivo. Para evitar duplicaciones directas, se excluyeron los registros de Beynnon incluidos en la tabla de Montalvo. Sin embargo, debido a las diferencias en las definiciones de lesión, las poblaciones y las unidades de exposición, las tasas agrupadas se consideran estimaciones descriptivas exploratorias y no deben interpretarse como tasas generales de una población homogénea.
 
@@ -181,7 +186,7 @@ grafico.deporte <- ggplot(
   hjust = 1,
   color = "grey40"
 ),
-    plot.title = element_text(size = 12, face = "bold"),
+    plot.title = element_text(size = 10, face = "bold"),
     axis.title = element_text(size = 12),
     axis.text = element_text(size = 10)
   )
