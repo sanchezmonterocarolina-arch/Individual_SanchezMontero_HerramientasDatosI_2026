@@ -13,18 +13,33 @@ grafico.sexo <- ggplot(
   )
 ) +
   geom_col() +
+  scale_fill_manual(
+    values = c(
+      "hombre" = "#659681", 
+      "mujer" = "#A17DB5")
+  ) +
   labs(
     title = "Gráfico 3. Incidencia de lesiones del LCA según sexo",
     x = "Sexo",
-    y = "Tasa de incidencia por 1000 exposiciones"
+    y = "Tasa de incidencia por 1000 exposiciones",
+    caption = paste(
+      "Fuente: elaboración propia a partir de",
+      "Beynnon et al. (2014) y Montalvo et al. (2019)."
+    )
   ) +
   theme_minimal() +
   theme(
-    plot.title = element_text(size = 14, face = "bold"),
-    axis.title = element_text(size = 12),
-    axis.text = element_text(size = 10),
+    plot.caption = element_text(
+      size = 8,
+      hjust = 1,
+      color = "grey40"
+    ),
+    plot.title = element_text(size = 12, face = "bold"),
+    axis.title = element_text(size = 10),
+    axis.text = element_text(size = 8),
     legend.position = "none"
   )
+
 
 ggsave(
   filename = "res/graficos/incidencia_sexo.png",
